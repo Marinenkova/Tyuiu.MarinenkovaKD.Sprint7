@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.IO;
 
 namespace Project.V15.Test
 {
@@ -7,8 +8,13 @@ namespace Project.V15.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckFile()
         {
+            string path = @"C:\Users\Я твой-ты моя\Desktop\test.xlsx";
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            Assert.AreEqual(true, fileExists);
+
         }
     }
 }

@@ -108,5 +108,11 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.V15.Lib\Project.V15.Lib.csproj">
+      <Project>{5e121627-19e2-4e74-9c5f-5d953aa27e5b}</Project>
+      <Name>Project.V15.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

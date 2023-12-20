@@ -10,7 +10,7 @@ namespace Project.V15.Test
         [TestMethod]
         public void CheckFile()
         {
-            string path = @"C:\Users\Я твой-ты моя\Desktop\test.xlsx";
+            string path = @"C:\Users\Я твой-ты моя\Desktop\InPutFile.csv";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             Assert.AreEqual(true, fileExists);

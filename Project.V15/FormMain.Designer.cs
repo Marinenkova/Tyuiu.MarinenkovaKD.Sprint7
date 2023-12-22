@@ -29,19 +29,22 @@ namespace Project.V15
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.buttonHelp_MKD = new System.Windows.Forms.Button();
+            this.buttonSave_MKD = new System.Windows.Forms.Button();
+            this.buttonOpen_MKD = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridViewOut_MKD = new System.Windows.Forms.DataGridView();
+            this.openFileDialog_MKD = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog_MKD = new System.Windows.Forms.SaveFileDialog();
+            this.toolTip_MKD = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOut_MKD)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,22 +58,12 @@ namespace Project.V15
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 79);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(656, 371);
-            this.panel2.TabIndex = 1;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonHelp_MKD);
+            this.groupBox1.Controls.Add(this.buttonSave_MKD);
+            this.groupBox1.Controls.Add(this.buttonOpen_MKD);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -79,55 +72,74 @@ namespace Project.V15
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Работа с файлом";
             // 
-            // button1
+            // buttonHelp_MKD
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(12, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 44);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonHelp_MKD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_MKD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonHelp_MKD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHelp_MKD.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_MKD.Image")));
+            this.buttonHelp_MKD.Location = new System.Drawing.Point(593, 19);
+            this.buttonHelp_MKD.Name = "buttonHelp_MKD";
+            this.buttonHelp_MKD.Size = new System.Drawing.Size(51, 44);
+            this.buttonHelp_MKD.TabIndex = 0;
+            this.toolTip_MKD.SetToolTip(this.buttonHelp_MKD, "Об авторе");
+            this.buttonHelp_MKD.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // buttonSave_MKD
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(69, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 44);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonSave_MKD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonSave_MKD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSave_MKD.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave_MKD.Image")));
+            this.buttonSave_MKD.Location = new System.Drawing.Point(60, 19);
+            this.buttonSave_MKD.Name = "buttonSave_MKD";
+            this.buttonSave_MKD.Size = new System.Drawing.Size(51, 44);
+            this.buttonSave_MKD.TabIndex = 0;
+            this.toolTip_MKD.SetToolTip(this.buttonSave_MKD, "Сохранить таблицу");
+            this.buttonSave_MKD.UseVisualStyleBackColor = false;
+            this.buttonSave_MKD.Click += new System.EventHandler(this.buttonSave_MKD_Click);
             // 
-            // button3
+            // buttonOpen_MKD
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(593, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(51, 44);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonOpen_MKD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonOpen_MKD.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen_MKD.Image")));
+            this.buttonOpen_MKD.Location = new System.Drawing.Point(3, 19);
+            this.buttonOpen_MKD.Name = "buttonOpen_MKD";
+            this.buttonOpen_MKD.Size = new System.Drawing.Size(51, 44);
+            this.buttonOpen_MKD.TabIndex = 0;
+            this.toolTip_MKD.SetToolTip(this.buttonOpen_MKD, "Открыть таблицу");
+            this.buttonOpen_MKD.UseVisualStyleBackColor = false;
+            this.buttonOpen_MKD.Click += new System.EventHandler(this.buttonOpen_MKD_Click);
             // 
-            // dataGridView1
+            // panel2
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(656, 371);
-            this.dataGridView1.TabIndex = 0;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.dataGridViewOut_MKD);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 79);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(656, 371);
+            this.panel2.TabIndex = 1;
             // 
-            // openFileDialog1
+            // dataGridViewOut_MKD
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.dataGridViewOut_MKD.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewOut_MKD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOut_MKD.ColumnHeadersVisible = false;
+            this.dataGridViewOut_MKD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewOut_MKD.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewOut_MKD.Name = "dataGridViewOut_MKD";
+            this.dataGridViewOut_MKD.RowHeadersVisible = false;
+            this.dataGridViewOut_MKD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewOut_MKD.Size = new System.Drawing.Size(656, 371);
+            this.dataGridViewOut_MKD.TabIndex = 0;
+            // 
+            // openFileDialog_MKD
+            // 
+            this.openFileDialog_MKD.FileName = "openFileDialog1";
+            // 
+            // toolTip_MKD
+            // 
+            this.toolTip_MKD.ToolTipTitle = "Помощь";
             // 
             // FormMain
             // 
@@ -137,11 +149,12 @@ namespace Project.V15
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Договорная деятельность организации | Главное меню";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOut_MKD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,12 +163,14 @@ namespace Project.V15
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonHelp_MKD;
+        private System.Windows.Forms.Button buttonSave_MKD;
+        private System.Windows.Forms.Button buttonOpen_MKD;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridView dataGridViewOut_MKD;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_MKD;
+        private System.Windows.Forms.ToolTip toolTip_MKD;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog_MKD;
     }
 }
 

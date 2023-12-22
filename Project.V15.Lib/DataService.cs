@@ -31,35 +31,7 @@ namespace Project.V15.Lib
             }
             return arrayValues;
         }
-        public int Sum(string path)
-        {
-            string[,] array = LoadFromFileData(path);
-            int rows = array.GetUpperBound(0) + 1;
-            int summ = 0;
-            for (int i = 0; i < rows; i++)
-            {
-                summ += Convert.ToInt32(array[i, 5]);
-            }
-            return summ;
-        }
-
-        public int Count(string path)
-        {
-            string[,] array = LoadFromFileData(path);
-            int rows = array.GetUpperBound(0) + 1;
-            return rows;
-        }
-        public double Srednee(string path)
-        {
-            string[,] array = LoadFromFileData(path);
-            int rows = array.GetUpperBound(0) + 1;
-            double summ = 0;
-            for (int i = 0; i < rows; i++)
-            {
-                summ += Convert.ToInt32(array[i, 5]);
-            }
-            return Math.Round((summ / rows), 1);
-        }
+        
     }
 }
 

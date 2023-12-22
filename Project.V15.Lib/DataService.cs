@@ -19,17 +19,17 @@ namespace Project.V15.Lib
             int rows = lines.Length;
             int colums = lines[0].Split(';').Length;
 
-            string[,] arrayValues = new string[rows, colums];
+            string[,] array = new string[rows, colums];
 
             for (int i = 0; i < rows; i++)
             {
                 string[] line_r = lines[i].Split(';');
                 for (int j = 0; j < colums; j++)
                 {
-                    arrayValues[i, j] = line_r[j];
+                    array[i, j] = line_r[j];
                 }
             }
-            return arrayValues;
+            return array;
         }
         
     }

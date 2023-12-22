@@ -23,7 +23,7 @@ namespace Project.V15
 
         }
         DataService ds = new DataService();
-        static string[,] arrayValues;
+        static string[,] array;
         string openFilePath;
 
         private void buttonOpen_MKD_Click(object sender, EventArgs e)
@@ -32,11 +32,11 @@ namespace Project.V15
             {
                 openFileDialog_MKD.ShowDialog();
                 openFilePath = openFileDialog_MKD.FileName;
-                arrayValues = ds.LoadFromFileData(openFilePath);
+                array = ds.LoadFromFileData(openFilePath);
                 dataGridViewOut_MKD.Rows.Clear();
 
-                int rows = arrayValues.GetUpperBound(0) + 1;
-                int colums = arrayValues.Length / rows;
+                int rows = array.GetUpperBound(0) + 1;
+                int colums = array.Length / rows;
 
                 dataGridViewOut_MKD.ColumnCount = colums;
                 dataGridViewOut_MKD.RowCount = rows;
@@ -46,7 +46,7 @@ namespace Project.V15
                 {
                     for (int c = 0; c < colums; c++)
                     {
-                        dataGridViewOut_MKD.Rows[r].Cells[c].Value = arrayValues[r, c];
+                        dataGridViewOut_MKD.Rows[r].Cells[c].Value = array[r, c];
                     }
                 }
                 dataGridViewOut_MKD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;

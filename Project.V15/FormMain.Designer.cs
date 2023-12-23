@@ -33,6 +33,7 @@ namespace Project.V15
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelWork_MKD = new System.Windows.Forms.Panel();
             this.groupBoxWork_MKD = new System.Windows.Forms.GroupBox();
+            this.buttonInfo_MKD = new System.Windows.Forms.Button();
             this.buttonHelp_MKD = new System.Windows.Forms.Button();
             this.buttonSave_MKD = new System.Windows.Forms.Button();
             this.buttonOpen_MKD = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace Project.V15
             this.openFileDialog_MKD = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_MKD = new System.Windows.Forms.SaveFileDialog();
             this.toolTip_MKD = new System.Windows.Forms.ToolTip(this.components);
-            this.buttonInfo_MKD = new System.Windows.Forms.Button();
             this.panelWork_MKD.SuspendLayout();
             this.groupBoxWork_MKD.SuspendLayout();
             this.paneldata_MKD.SuspendLayout();
@@ -74,6 +74,20 @@ namespace Project.V15
             this.groupBoxWork_MKD.TabStop = false;
             this.groupBoxWork_MKD.Text = "Работа с файлом";
             // 
+            // buttonInfo_MKD
+            // 
+            this.buttonInfo_MKD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo_MKD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonInfo_MKD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInfo_MKD.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_MKD.Image")));
+            this.buttonInfo_MKD.Location = new System.Drawing.Point(536, 19);
+            this.buttonInfo_MKD.Name = "buttonInfo_MKD";
+            this.buttonInfo_MKD.Size = new System.Drawing.Size(51, 44);
+            this.buttonInfo_MKD.TabIndex = 0;
+            this.toolTip_MKD.SetToolTip(this.buttonInfo_MKD, "Работа с приложением");
+            this.buttonInfo_MKD.UseVisualStyleBackColor = false;
+            this.buttonInfo_MKD.Click += new System.EventHandler(this.buttonInfo_MKD_Click);
+            // 
             // buttonHelp_MKD
             // 
             this.buttonHelp_MKD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -104,6 +118,7 @@ namespace Project.V15
             // buttonOpen_MKD
             // 
             this.buttonOpen_MKD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonOpen_MKD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpen_MKD.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen_MKD.Image")));
             this.buttonOpen_MKD.Location = new System.Drawing.Point(3, 19);
             this.buttonOpen_MKD.Name = "buttonOpen_MKD";
@@ -143,19 +158,6 @@ namespace Project.V15
             // toolTip_MKD
             // 
             this.toolTip_MKD.ToolTipTitle = "Помощь";
-            // 
-            // buttonInfo_MKD
-            // 
-            this.buttonInfo_MKD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonInfo_MKD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.buttonInfo_MKD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonInfo_MKD.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_MKD.Image")));
-            this.buttonInfo_MKD.Location = new System.Drawing.Point(536, 19);
-            this.buttonInfo_MKD.Name = "buttonInfo_MKD";
-            this.buttonInfo_MKD.Size = new System.Drawing.Size(51, 44);
-            this.buttonInfo_MKD.TabIndex = 0;
-            this.buttonInfo_MKD.UseVisualStyleBackColor = false;
-            this.buttonInfo_MKD.Click += new System.EventHandler(this.buttonInfo_MKD_Click);
             // 
             // FormMain
             // 

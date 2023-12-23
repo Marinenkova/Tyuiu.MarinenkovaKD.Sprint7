@@ -31,46 +31,48 @@ namespace Project.V15
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelWork_MKD = new System.Windows.Forms.Panel();
+            this.groupBoxWork_MKD = new System.Windows.Forms.GroupBox();
             this.buttonHelp_MKD = new System.Windows.Forms.Button();
             this.buttonSave_MKD = new System.Windows.Forms.Button();
             this.buttonOpen_MKD = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.paneldata_MKD = new System.Windows.Forms.Panel();
             this.dataGridViewOut_MKD = new System.Windows.Forms.DataGridView();
             this.openFileDialog_MKD = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_MKD = new System.Windows.Forms.SaveFileDialog();
             this.toolTip_MKD = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.buttonInfo_MKD = new System.Windows.Forms.Button();
+            this.panelWork_MKD.SuspendLayout();
+            this.groupBoxWork_MKD.SuspendLayout();
+            this.paneldata_MKD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOut_MKD)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelWork_MKD
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(656, 79);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panelWork_MKD.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelWork_MKD.Controls.Add(this.groupBoxWork_MKD);
+            this.panelWork_MKD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelWork_MKD.Location = new System.Drawing.Point(0, 0);
+            this.panelWork_MKD.Name = "panelWork_MKD";
+            this.panelWork_MKD.Size = new System.Drawing.Size(656, 79);
+            this.panelWork_MKD.TabIndex = 0;
+            this.panelWork_MKD.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // groupBox1
+            // groupBoxWork_MKD
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.buttonHelp_MKD);
-            this.groupBox1.Controls.Add(this.buttonSave_MKD);
-            this.groupBox1.Controls.Add(this.buttonOpen_MKD);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(656, 79);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Работа с файлом";
+            this.groupBoxWork_MKD.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBoxWork_MKD.Controls.Add(this.buttonInfo_MKD);
+            this.groupBoxWork_MKD.Controls.Add(this.buttonHelp_MKD);
+            this.groupBoxWork_MKD.Controls.Add(this.buttonSave_MKD);
+            this.groupBoxWork_MKD.Controls.Add(this.buttonOpen_MKD);
+            this.groupBoxWork_MKD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxWork_MKD.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxWork_MKD.Name = "groupBoxWork_MKD";
+            this.groupBoxWork_MKD.Size = new System.Drawing.Size(656, 79);
+            this.groupBoxWork_MKD.TabIndex = 0;
+            this.groupBoxWork_MKD.TabStop = false;
+            this.groupBoxWork_MKD.Text = "Работа с файлом";
             // 
             // buttonHelp_MKD
             // 
@@ -84,6 +86,7 @@ namespace Project.V15
             this.buttonHelp_MKD.TabIndex = 0;
             this.toolTip_MKD.SetToolTip(this.buttonHelp_MKD, "Об авторе");
             this.buttonHelp_MKD.UseVisualStyleBackColor = false;
+            this.buttonHelp_MKD.Click += new System.EventHandler(this.buttonHelp_MKD_Click);
             // 
             // buttonSave_MKD
             // 
@@ -110,15 +113,15 @@ namespace Project.V15
             this.buttonOpen_MKD.UseVisualStyleBackColor = false;
             this.buttonOpen_MKD.Click += new System.EventHandler(this.buttonOpen_MKD_Click);
             // 
-            // panel2
+            // paneldata_MKD
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.dataGridViewOut_MKD);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 79);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(656, 371);
-            this.panel2.TabIndex = 1;
+            this.paneldata_MKD.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.paneldata_MKD.Controls.Add(this.dataGridViewOut_MKD);
+            this.paneldata_MKD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneldata_MKD.Location = new System.Drawing.Point(0, 79);
+            this.paneldata_MKD.Name = "paneldata_MKD";
+            this.paneldata_MKD.Size = new System.Drawing.Size(656, 371);
+            this.paneldata_MKD.TabIndex = 1;
             // 
             // dataGridViewOut_MKD
             // 
@@ -141,19 +144,32 @@ namespace Project.V15
             // 
             this.toolTip_MKD.ToolTipTitle = "Помощь";
             // 
+            // buttonInfo_MKD
+            // 
+            this.buttonInfo_MKD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo_MKD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonInfo_MKD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInfo_MKD.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_MKD.Image")));
+            this.buttonInfo_MKD.Location = new System.Drawing.Point(536, 19);
+            this.buttonInfo_MKD.Name = "buttonInfo_MKD";
+            this.buttonInfo_MKD.Size = new System.Drawing.Size(51, 44);
+            this.buttonInfo_MKD.TabIndex = 0;
+            this.buttonInfo_MKD.UseVisualStyleBackColor = false;
+            this.buttonInfo_MKD.Click += new System.EventHandler(this.buttonInfo_MKD_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.paneldata_MKD);
+            this.Controls.Add(this.panelWork_MKD);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Договорная деятельность организации | Главное меню";
-            this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panelWork_MKD.ResumeLayout(false);
+            this.groupBoxWork_MKD.ResumeLayout(false);
+            this.paneldata_MKD.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOut_MKD)).EndInit();
             this.ResumeLayout(false);
 
@@ -161,16 +177,17 @@ namespace Project.V15
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panelWork_MKD;
+        private System.Windows.Forms.GroupBox groupBoxWork_MKD;
         private System.Windows.Forms.Button buttonHelp_MKD;
         private System.Windows.Forms.Button buttonSave_MKD;
         private System.Windows.Forms.Button buttonOpen_MKD;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel paneldata_MKD;
         private System.Windows.Forms.DataGridView dataGridViewOut_MKD;
         private System.Windows.Forms.OpenFileDialog openFileDialog_MKD;
         private System.Windows.Forms.ToolTip toolTip_MKD;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_MKD;
+        private System.Windows.Forms.Button buttonInfo_MKD;
     }
 }
 

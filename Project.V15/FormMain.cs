@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using Project.V15.Lib;
 using System.Text;
+using System.ComponentModel;
 
 namespace Project.V15
 {
@@ -110,7 +111,11 @@ namespace Project.V15
             formAbout.ShowDialog();
         }
 
-        
+        private void buttonInfo_MKD_Click(object sender, EventArgs e)
+        {
+            FormHelp formAbout = new FormHelp();
+            formAbout.ShowDialog();
+        }
     }
 }
 

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4QCGRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAAB
         AAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAASAAAAAEAAABIAAAAAQAAAAKSfAAHAAAAEQAA
@@ -758,7 +758,7 @@
         W/IkY6f1Q+z1M9kf4R+Z/rj7xf8AKP0/mCcf/9k=
 </value>
   </data>
-  <data name="textBox1.Text" xml:space="preserve">
+  <data name="textBoxAbout.Text" xml:space="preserve">
     <value>Разработчик: Мариненкова К. Д
 группа ИСТНб-23-1
 

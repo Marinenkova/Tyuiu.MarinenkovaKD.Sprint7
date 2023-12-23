@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Project.V15
 {
-    public partial class FormAbout : Form
+    public partial class FormHelp : Form
     {
-        public FormAbout()
+        public FormHelp()
         {
             InitializeComponent();
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void buttonOKInfo_MKD_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -29,6 +29,7 @@ namespace Project.V15
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHelp));
             this.textBoxInfo_MKD = new System.Windows.Forms.TextBox();
             this.buttonOKInfo_MKD = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -39,14 +40,13 @@ namespace Project.V15
             this.textBoxInfo_MKD.Multiline = true;
             this.textBoxInfo_MKD.Name = "textBoxInfo_MKD";
             this.textBoxInfo_MKD.ReadOnly = true;
-            this.textBoxInfo_MKD.Size = new System.Drawing.Size(236, 85);
+            this.textBoxInfo_MKD.Size = new System.Drawing.Size(361, 104);
             this.textBoxInfo_MKD.TabIndex = 0;
-            this.textBoxInfo_MKD.Text = "1. Откройте таблицу\r\n\r\n2.  Добавьте в таблицу нужную информацию\r\n\r\n3. Сохраните н" +
-    "овую таблицу";
+            this.textBoxInfo_MKD.Text = resources.GetString("textBoxInfo_MKD.Text");
             // 
             // buttonOKInfo_MKD
             // 
-            this.buttonOKInfo_MKD.Location = new System.Drawing.Point(203, 104);
+            this.buttonOKInfo_MKD.Location = new System.Drawing.Point(326, 123);
             this.buttonOKInfo_MKD.Name = "buttonOKInfo_MKD";
             this.buttonOKInfo_MKD.Size = new System.Drawing.Size(48, 23);
             this.buttonOKInfo_MKD.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace Project.V15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 142);
+            this.ClientSize = new System.Drawing.Size(386, 153);
             this.Controls.Add(this.buttonOKInfo_MKD);
             this.Controls.Add(this.textBoxInfo_MKD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

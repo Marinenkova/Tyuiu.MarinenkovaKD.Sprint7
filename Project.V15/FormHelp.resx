@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBoxInfo_MKD.Text" xml:space="preserve">
+    <value>1. Откройте таблицу. Нужно, чтобы столбцы были названы, а первый столбец был пронумерован. Таблица должна быть в формате csv (таблица для примера находится в папке Debug)
+
+2.  Добавьте в таблицу нужную информацию
+
+3. Сохраните новую таблицу</value>
+  </data>
 </root>
